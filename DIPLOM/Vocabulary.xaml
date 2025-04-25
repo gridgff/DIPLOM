@@ -3,43 +3,93 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DIPLOM.Vocabulary"
              Title="Vocabulary">
-    <VerticalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="Center">
-        <Label 
-            Text="Your Vocabulary"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Grid ColumnSpacing="5" VerticalOptions="Center" HorizontalOptions="Center">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="100"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="60"/>
-                </Grid.RowDefinitions>
+    <VerticalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Memorise words to complete\na test then"/>
+        <Border 
+        Stroke="#6E6E6E" 
+        BackgroundColor="Transparent" 
+            StrokeThickness="2"
+        Padding="20"
+            
+            HorizontalOptions="Center">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="25"/>
+            </Border.StrokeShape>
+            
+            <VerticalStackLayout Spacing="10">
                 
-            <BoxView Color="#ac99ea" WidthRequest="100" 
-                     HeightRequest="60" CornerRadius="10" 
-                     HorizontalOptions="Center" VerticalOptions="Center"
-                     Grid.Column="0" Grid.Row="0"/>
-            <BoxView Color="#ac99ea" WidthRequest="100" 
-                     HeightRequest="60" CornerRadius="10" 
-                     HorizontalOptions="Center" VerticalOptions="Center"
-                     Grid.Column="1" Grid.Row="0"/>
-            <Label TextColor="#242424" HorizontalOptions="Center" VerticalOptions="Center" Text="English" Grid.Column="0" Grid.Row="0"/>
-            <Label TextColor="#242424" HorizontalOptions="Center" VerticalOptions="Center" Text="Русский" Grid.Column="1" Grid.Row="0"/>
-            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="word" Grid.Column="0" Grid.Row="1"/>
-            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="слово" Grid.Column="1" Grid.Row="1"/>
-        </Grid>
-         <Button 
+                <Label 
+                Text="Your Vocabulary"
+                TextColor="White" 
+                    FontSize="24"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+                <Label
+                    Text="Choose a number of words by slider"/>
+                <Slider
+                    Minimum="5"
+                    Maximum="20"
+                    ThumbColor="#ac99ea"
+                    MinimumTrackColor="Green"
+                    MaximumTrackColor="Gray"
+                    ValueChanged="OnSliderValueChanged"/>
+
+
+                <Grid ColumnSpacing="5" RowSpacing="5" VerticalOptions="Center" IsVisible="False">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                        </Grid.RowDefinitions>
+
+                        
+                        <Frame 
+                    BackgroundColor="#ac99ea" 
+                    CornerRadius="10"
+                    Grid.Column="0" Grid.Row="0"/>
+                        <Frame 
+                    BackgroundColor="#ac99ea" 
+                    CornerRadius="10"
+                    Grid.Column="1" Grid.Row="0"/>
+
+                        
+                        <Label 
+                    Text="English" 
+                    TextColor="#242424"
+                    Grid.Column="0" Grid.Row="0"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+                        <Label 
+                    Text="Русский" 
+                    TextColor="#242424"
+                    Grid.Column="1" Grid.Row="0"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+                        <Label 
+                    Text="word" 
+                    Grid.Column="0" Grid.Row="1"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+                        <Label 
+                    Text="слово" 
+                    Grid.Column="1" Grid.Row="1"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+                    </Grid>
+
+                    
+                    <Button 
                 x:Name="SubmitBtn"
                 Text="Submit"
-                SemanticProperties.Hint="Submitting word"
-                Clicked="SubmitWord"
+                BackgroundColor="#ac99ea"
+                
                 WidthRequest="200"
                 HeightRequest="50"
-         />
-        
-            
+                HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>

@@ -15,5 +15,17 @@
         Title="Vocabulary"
         ContentTemplate="{DataTemplate local:Vocabulary}"
         Route="Vocabulary"/>
+    <ShellContent 
+        Title="Tests"
+        ContentTemplate="{DataTemplate local:Tests}"
+        Route="Tests"/>
+    <!--<ShellContent 
+        Title="Progress"
+        ContentTemplate="{DataTemplate local:Progress}"
+        Route="Progress"/>
+    <ShellContent 
+        Title="Settings"
+        ContentTemplate="{DataTemplate local:Settings}"
+        Route="Settings"/>-->
 
 </Shell>
