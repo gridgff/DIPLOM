@@ -4,8 +4,9 @@
              x:Class="DIPLOM.Vocabulary"
              Title="Vocabulary">
     <VerticalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="Memorise words to complete\na test then"/>
-        <Border 
+        <Label x:Name="InstructionL" Text='Memorise words to complete a test then'/>
+        <Border
+            
         Stroke="#6E6E6E" 
         BackgroundColor="Transparent" 
             StrokeThickness="2"
@@ -20,22 +21,41 @@
                 
                 <Label 
                 Text="Your Vocabulary"
-                TextColor="White" 
+                
                     FontSize="24"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
                 <Label
-                    Text="Choose a number of words by slider"/>
-                <Slider
+                    Text="Choose a number of words by slider"
+                    x:Name="InstructionL2"/>
+                <HorizontalStackLayout Spacing="10"  
+                                       
+                                       HorizontalOptions="Center" 
+                                       VerticalOptions="Center"
+                                       x:Name="SliderContainer">
+                    
+                    <Label x:Name="MinL" Text="5" HorizontalOptions="Start"/>
+                    
+                    <Slider
+                    x:Name="WordsCountSlider"
                     Minimum="5"
+                    Value="0"
                     Maximum="20"
                     ThumbColor="#ac99ea"
                     MinimumTrackColor="Green"
                     MaximumTrackColor="Gray"
-                    ValueChanged="OnSliderValueChanged"/>
+                    ValueChanged="OnSliderValueChanged"
+                        WidthRequest="250"/>
+                
+                    
+                    <Label x:Name="MaxL" Text="Max: 20" HorizontalOptions="End"/>
+                </HorizontalStackLayout>
+                <Label x:Name="CurrentL" Text="Current: 5" FontAttributes="Bold" />
 
 
-                <Grid ColumnSpacing="5" RowSpacing="5" VerticalOptions="Center" IsVisible="False">
+                <Grid 
+                    x:Name="WordsGrid"
+                    ColumnSpacing="5" RowSpacing="5" VerticalOptions="Center" IsVisible="False">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="100"/>
@@ -84,10 +104,9 @@
                     <Button 
                 x:Name="SubmitBtn"
                 Text="Submit"
-                BackgroundColor="#ac99ea"
                 
-                WidthRequest="200"
-                HeightRequest="50"
+                Clicked="SubmitWord"
+                
                 HorizontalOptions="Center"/>
             </VerticalStackLayout>
         </Border>

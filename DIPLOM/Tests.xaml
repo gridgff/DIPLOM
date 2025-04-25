@@ -22,7 +22,7 @@
                 <Label Text="Vocabulary Test" HorizontalOptions="Center"
                    VerticalOptions="Center"/>
             <Button Text="Start"/>
-
+            
             </VerticalStackLayout>
         </Border>
     </VerticalStackLayout>

@@ -19,13 +19,15 @@
         Title="Tests"
         ContentTemplate="{DataTemplate local:Tests}"
         Route="Tests"/>
+    <ShellContent 
+        Title="Settings"
+        ContentTemplate="{DataTemplate local:Settings}"
+        Route="Settings"/>
+
     <!--<ShellContent 
         Title="Progress"
         ContentTemplate="{DataTemplate local:Progress}"
         Route="Progress"/>
-    <ShellContent 
-        Title="Settings"
-        ContentTemplate="{DataTemplate local:Settings}"
-        Route="Settings"/>-->
+    -->
 
 </Shell>

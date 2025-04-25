@@ -5,6 +5,11 @@
         public AppShell()
         {
             InitializeComponent();
+            RegisterRoutes();
+        }
+        private void RegisterRoutes()
+        {
+            Routing.RegisterRoute("Settings", typeof(Settings));
         }
     }
 }
