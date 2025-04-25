@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DIPLOM.Register"
+             Title="Register">
+    <VerticalStackLayout>
+        <Label 
+            Text="Sign Up"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label
+                Text="Email:"
+                />
+            <Entry Placeholder="email_em@gmail.com" MaxLength="30" WidthRequest="300"/>
+            <Label
+                Text="Password:"/>
+            <Entry IsPassword="True" MaxLength="20" WidthRequest="300"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
